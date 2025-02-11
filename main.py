@@ -9,9 +9,10 @@ def main() -> None:
                 exit()
 
             user_input = user_input.replace('^', '**')
+            user_input = user_input.replace('i', 'j')
 
             imaginary: complex = eval(user_input)
-            print(imaginary)
+            print(f'Result: {imaginary}')
         except NameError:
             print('Invalid input')
         except KeyboardInterrupt:
