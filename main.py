@@ -1,11 +1,11 @@
 def main() -> None:
+    exit_message: str = 'Exiting program...'
     while True:
         try:
             user_input: str = input(
-                'Enter an expression of complex number algebra: ')
-
+                'Enter a complex number algebraic expression: ')
             if user_input == 'exit':
-                print('Thanks for trying my program!')
+                print(exit_message)
                 exit()
 
             user_input = user_input.replace('^', '**')
@@ -13,10 +13,12 @@ def main() -> None:
 
             imaginary: complex = eval(user_input)
             print(f'Result: {imaginary}')
+
         except NameError:
-            print('Invalid input')
+            print('Please enter some valid input...')
+
         except KeyboardInterrupt:
-            print('Exiting...')
+            print(exit_message)
             exit()
 
 
