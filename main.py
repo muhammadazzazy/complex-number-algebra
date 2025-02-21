@@ -1,5 +1,6 @@
 def main() -> None:
     exit_message: str = 'Exiting program...'
+    print('Welcome to The Complex Number Algebra 🖩!')
     while True:
         try:
             user_input: str = input(
