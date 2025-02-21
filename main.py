@@ -17,6 +17,7 @@ def main() -> None:
 
         except NameError:
             print('Please enter some valid input...')
+            continue
 
         except KeyboardInterrupt:
             print(exit_message)
